@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    form h2 {
+      margin-top: 0;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form select,
+    form input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    form button.edit {
+      background-color: #008CBA;
+    }
+    form button.delete {
+      background-color: #f44336;
+    }
+    input[type="text"][name="search"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Management System</h1>
+  <form id="studentForm">
+    <h2>Add/Edit Student</h2>
+    <input type="hidden" name="studentId">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <input type="text" name="grade" placeholder="Grade" required>
+    <input type="text" name="degree" placeholder="Degree" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit" id="submitButton">Add Student</button>
+    <button type="button" id="cancelButton">Cancel</button>
+  </form>
+  <h2>Student List</h2>
+  <input type="text" name="search" placeholder="Search by name, email, or degree" id="searchInput">
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+        <th>Degree</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="studentTableBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
